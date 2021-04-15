@@ -1,6 +1,7 @@
-import derossiImg from '../assets/p1.jpg'
-import coloniaImg from '../assets/p2.jpg'
-import extraterrestreImg from '../assets/p3.jpg'
+import derossiImg from '../assets/home.jpg'
+import coloniaImg from '../assets/house.jpg'
+import extraterrestreImg from '../assets/lake.jpg'
+import ericaImg from '../assets/erica.jpg'
 
 const portfolio = [
     {
@@ -17,6 +18,12 @@ const portfolio = [
     },
     {
         img:      extraterrestreImg,
+        title:    'DeRossi',
+        url:      'https://www.leandroubilla.com',
+        category: 'gatsby'
+    },
+    {
+        img:      ericaImg,
         title:    'DeRossi',
         url:      'https://www.leandroubilla.com',
         category: 'gatsby'

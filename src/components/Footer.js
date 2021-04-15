@@ -14,7 +14,7 @@ const Footer = () => {
                     </div>
                     <div className="right">
                         <span>
-                            &copy; { new Date().getFullYear() } Todos los derechos reservados.
+                            &copy; { new Date().getFullYear() } All rights reserved.
                         </span>
                     </div>
                 </div>

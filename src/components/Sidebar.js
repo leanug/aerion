@@ -1,8 +1,8 @@
 import React from 'react'
 import Links from './Links'
-import { IoMdClose } from 'react-icons/io'
+import {IoMdClose} from 'react-icons/io'
 import styled from 'styled-components'
-import { setColor } from '../constants/styles'
+import {setColor, setBreakpoint} from '../constants/styles'
 
 const Sidebar = ({ isOpen, toggleSidebar }) => (
     <Wrapper 
@@ -10,35 +10,40 @@ const Sidebar = ({ isOpen, toggleSidebar }) => (
       aria-label="Main sidebar containing navigation links"
       aria-hidden={`${ ! isOpen }`}
     >
+      <div className="sidebar-content">
+        <Links styleClass={`${isOpen ? 'sidebar-links' : ''}`} />
+      </div>
       <div className="btn-container">
         <button onClick={ toggleSidebar } className="close-btn">
           <IoMdClose />
         </button>
       </div>
-      <div className="sidebar-content">
-        <Links styleClass={`${isOpen ? 'sidebar-links' : ''}`} />
-      </div>
     </Wrapper>
 )
 
 const Wrapper = styled.aside`
+    align-items: flex-start;
+    display: flex;
+    padding: 4rem 2rem;
+
+    @media screen and (min-width: ${setBreakpoint.small}) {
+      padding: 4rem 5rem;
+    }
+
     &.sidebar {
       background-color: ${setColor.delta_1};
-      height: 100vh;
       left: 0;
-      min-width: 30rem;
+      width: 100vw;
       overflow-x: hidden;
-      padding: 3rem 3rem;
       position: fixed;
       transition: all 0.2s ease-out;
-      transform: translateX(-100%);
+      transform: translateY(-100%);
       top: 0;
       z-index: 999;
 
       a {
         color: ${setColor.sigma};
-        font-size: 1.8rem;
-        margin: 1rem 0;
+        font-size: 1.6rem;
       }
 
       .btn-container {
@@ -52,16 +57,16 @@ const Wrapper = styled.aside`
         color: ${setColor.sigma};
         cursor: pointer;
         font-size: 3rem;
+        transition: all 0.2s ease-out;
+      }
+
+      .close-btn:hover {
+        color: ${setColor.alpha};
       }
 
       .sidebar-content {
-        margin: 2rem 0;
         width: 100%;
         align-items: center;
-      }
-
-      .links-container {
-        padding-top: 2rem;
       }
 
       &.showSidebar {

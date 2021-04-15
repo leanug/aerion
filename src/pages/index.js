@@ -8,7 +8,6 @@ import Portfolio from '../components/Portfolio'
 import SEO from '../components/SEO'
 import styled from 'styled-components'
 import { setBreakpoint, setContainer, setColor } from '../constants/styles'
-
 import services from '../constants/services'
 import portfolio from '../constants/portfolio'
 import Services from '../components/Services'
@@ -22,35 +21,17 @@ export const query = graphql`
         }
       }
     }
-    house: file(relativePath: {eq: "house.jpg"}) {
+    house: file(relativePath: {eq: "bgsection.jpg"}) {
       childImageSharp {
         fluid(quality: 80, maxWidth: 800) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    images: allFile(filter: {relativeDirectory: {eq: "portfolio"}}) {
-      edges {
-        node {
-          id
-          childImageSharp {
-            fluid(quality: 100, maxWidth: 900) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
   }
 `
 
-const IndexPage = ({ data }) => {
-  const {images: {edges: portfolioImages}} = data
-
-  const portfolioFluid = portfolioImages.map(item => (
-    item.node.childImageSharp.fluid
-  ))
-
+const IndexPage = ({data}) => {
   return (
     <Layout>
       <SEO 
@@ -59,35 +40,51 @@ const IndexPage = ({ data }) => {
       />
 
       <Wrapper>
-        <section>
+        <section id="home">
           <Hero />
         </section>
 
-        <section className="container">
-            <Title title="Our Services" />
-            <div>
+        <section>
+          <Background image={data.house.childImageSharp.fluid} styleClass="banner light">
+            <div className="container center mx-auto">
+              <div className="mw-600">
+              <h2 className="center">
+                Build a Strong Online Presence with a professional and captivating Website 
+                that represents your Brand.
+              </h2>
+              <a href="#" className="btn light-btn">Get a quote</a>
+              </div>
+            </div>
+          </Background>
+        </section>
+
+        <section  id="services" className="container p-y">
+          <div className="mb-5">
+          <Title title="Our Services" />
+          </div >
+            <div className="services">
               <Services services={services} />
             </div>
         </section>
 
-        <section className="mb-10">
+        <section id="portfolio" className="mb-10">
           <Portfolio portfolio={portfolio} />
         </section>
 
-        <section className="container section-columns">
-            <div className="contact-left">
-                <p>Say Hi!</p>
-                <a className="h5" href="instagram.com/aerion.studio">Instagram</a>
-                <div className="mail-container">
-                  <p>Drop us a line with your ideas</p>
-                  <div class="fromLeft h1">
-                      <a href="mailto:hello@aerion.studio">hi@aerion.studio</a>
-                  </div>
-                </div>
+        <section  id="contact" className="container section-columns">
+          <div className="contact-left">
+            <p>Say Hi!</p>
+            <a className="h5" href="instagram.com/aerion.studio">Instagram</a>
+            <div className="mail-container">
+              <p>Drop us a line with your ideas</p>
+              <div class="fromLeft h1">
+                  <a href="mailto:hello@aerion.studio">hi@aerion.studio</a>
+              </div>
             </div>
-            <div>
-                <Contact />
-            </div>
+          </div>
+          <div>
+            <Contact />
+          </div>
         </section>
       </Wrapper>
     </Layout>
@@ -96,11 +93,7 @@ const IndexPage = ({ data }) => {
 
 const Wrapper = styled.article`
   margin-bottom: 10rem;
-
-  section {
-      margin-bottom: 10rem;
-  }
-  
+ 
   @media screen and (min-width: ${setBreakpoint.small}) {
     .section-columns {
       display: grid;
@@ -115,6 +108,11 @@ const Wrapper = styled.article`
     }
   }
   
+  .mw-600 {
+    max-width: 70rem;
+    margin: auto;
+  }
+
   .container {
     ${setContainer()}
   }
@@ -147,8 +145,29 @@ const Wrapper = styled.article`
       transition: transform 250ms ease-in-out;
   }
 
-  .h1:hover:after { transform: scaleX(1); }
-  .h1.fromLeft:after{  transform-origin:  0% 50%; }
+  .h1:hover:after {transform: scaleX(1);}
+  .h1.fromLeft:after{transform-origin:  0% 50%;}
+
+  .p-y {
+      padding: 10rem 0;
+  }
+
+  .mb-5 {
+      margin-bottom: 5rem;
+  }
+
+  .mb-10 {
+      margin-bottom: 10rem;
+  }
+
+  .light-btn {
+    background-color: ${setColor.sigma};  
+    color: ${setColor.delta_1}; 
+  }
+
+  .light-btn:hover {
+    color: ${setColor.alpha};  
+  }
 `
 
 export default IndexPage

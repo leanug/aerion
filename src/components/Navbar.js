@@ -5,16 +5,18 @@ import styled from 'styled-components'
 import { 
   setColor,
   setFont,
-  setTransition} from '../constants/styles'
+  setBreakpoint,
+  setTransition,
+  setContainer} from '../constants/styles'
 
 const Navbar = ({ toggleSidebar }) => {
   return (
     <Nav>
       <div className="logo-wrap">
-          <Link to="/" className="h3">Aerion.</Link>
+        <Link to="/" className="h3">Aerion.</Link>
       </div>
-      <button onClick={ toggleSidebar }>
-          <AiOutlineMenu />
+      <button onClick={toggleSidebar}>
+        <AiOutlineMenu />
       </button>
     </Nav>
   )
@@ -28,11 +30,15 @@ const Nav = styled.header`
   font-weight: 700;
   justify-content: space-between;
   min-height: 9rem;
-  padding: 0 4rem;
+  padding: 0 2rem;
   position: absolute;
   width: 100%;
   top: 0;
   z-index: 10;
+
+  @media screen and (min-width: ${setBreakpoint.small}) {
+    padding: 0 4rem;
+  }
 
   .logo-wrap {
     align-items: center;

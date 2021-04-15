@@ -6,12 +6,12 @@
  */
 
 import React, { useState } from 'react'
+import 'normalize.css'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 import Footer from './Footer'
 import GlobalStyles from './GlobalStyles'
 import styled from 'styled-components'
-import 'normalize.css'
 
 const Layout = ({ children }) => {
   const [ isOpen, setIsOpen ] = useState( false )

@@ -1,11 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: "Extraterrestre",
-    titleTemplate: "%s · Extraterrestre",
-    description: "Extraterrestre es un estudio de diseño con sede en Buenos Aires, Argentina.",
-    siteUrl: "https://www.extraterrestre.design", // No trailing slash allowed!
+    title: "Aerion",
+    titleTemplate: "%s · Aerion",
+    description: "Aerion es un estudio de diseño web con sede en Uruguay. Landing pages, Static websites, WordPress and eCommerce.",
+    siteUrl: "https://www.aerion.studio", // No trailing slash allowed!
     image: "/screenshot.jpg", // Path to your image you placed in the 'static' folder
-    twitterUsername: "",
   },
   plugins: [
     `gatsby-plugin-sitemap`,
@@ -16,13 +15,6 @@ module.exports = {
       options: {
         name: `assets`,
         path: `${__dirname}/src/assets`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `portfolio`,
-        path: `${__dirname}/src/assets/portfolio`,
       },
     },
     `gatsby-transformer-sharp`,

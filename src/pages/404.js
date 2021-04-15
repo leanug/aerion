@@ -9,14 +9,14 @@ const NotFoundPage = () => {
     return (
         <Layout>
             <SEO 
-            description="404 - Pagina no encontrada"
-            title="404 Pagina no encontrada"
+            description="404 - age not found"
+            title="age not found"
             />
             <Wrapper>
                 <h1>404</h1>
-                <h3>Pagina no encontrada</h3>
+                <h3>Page not found</h3>
                 <div>
-                    <Link to="/" className="btn">Inicio</Link>
+                    <Link to="/" className="btn">Home</Link>
                 </div>
             </Wrapper>
         </Layout>

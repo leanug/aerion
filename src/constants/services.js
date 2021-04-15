@@ -1,19 +1,22 @@
 import React from "react"
-import { FaCode, FaSketch, FaAndroid } from "react-icons/fa"
+import {FiMonitor} from "react-icons/fi"
+import {RiPagesLine} from "react-icons/ri"
+import {BiShoppingBag} from "react-icons/bi"
+
 export default [
   {
-    icon: <FaSketch className="service-icon" />,
+    icon: <RiPagesLine className="service-icon" />,
     title: "Landing Pages",
-    text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
+    text: `Single page website with a modern design. These sites are very fast and download in less than 1 second and are within the green range of Google's PageSpeed Insights.`,
   },
   {
-    icon: <FaAndroid className="service-icon" />,
-    title: "Multi-page Websites",
-    text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
+    icon: <FiMonitor className="service-icon" />,
+    title: "WordPress Websites",
+    text: `Eye catching modern websites, designed to be user-friendly and aesthetically pleasing, with all the advantages of wordpress.`,
   },
   {
-    icon: <FaAndroid className="service-icon" />,
-    title: "E-commerce",
-    text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
+    icon: <BiShoppingBag className="service-icon" />,
+    title: "eCommerce Websites",
+    text: `Start selling from an online store adapted to your business, from subscriptions to cupcakes and luxury cars, made with WordPress and WooCommerce.`,
   },
 ]

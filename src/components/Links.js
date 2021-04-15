@@ -30,21 +30,16 @@ const Wrapper = styled.nav`
     justify-content: left;
    
     a {
-        color: ${setColor.delta_2};
         display: block;
         font-size: 1.1rem;
         font-weight: 500;
         letter-spacing: 1px;
-        opacity: 0.7;
         transition: all 0.2s ease-out;
         outline: none;
     }
 
     a:hover {
-        opacity: 1;
-    }
-
-    .is-current {
+        color: ${setColor.alpha};
         opacity: 1;
     }
 `

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {setColor} from '../../constants/styles'
+import {setColor, setBreakpoint} from '../../constants/styles'
 
 const Work = ({img, url, title}) => {
   return (
@@ -17,6 +17,7 @@ const Work = ({img, url, title}) => {
 
 const Wrapper = styled.div`
   position: relative;
+  line-height: 0;
 
   .h3 {
     color: ${setColor.sigma};
@@ -50,7 +51,7 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 2rem;
+    padding: 0;
     color: ${setColor.sigma};
     text-align: center;
     transition: .5s ease;
@@ -58,6 +59,12 @@ const Wrapper = styled.div`
 
   .container:hover .overlay {
     opacity: 1;
+  }
+
+  @media screen and (max-width: ${setBreakpoint.small}) {
+    .overlay {
+      opacity: 1;
+    }
   }
 `
 

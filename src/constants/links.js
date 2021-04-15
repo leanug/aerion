@@ -1,19 +1,19 @@
 const links = [
   {
-    title: 'Inicio',
-    url: '#section-1',
+    title: 'Home',
+    url: '#home',
   },
   {
-    title: 'Sobre Nosotros',
-    url: '#section-2',
+    title: 'Services',
+    url: '#services',
   },
   {
-    title: 'Testimonios',
-    url: '#section-3',
+    title: 'Work',
+    url: '#portfolio',
   },
   {
-    title: 'Contacto',
-    url: '#section-4',
+    title: 'Contact',
+    url: '#contact',
   },
 ]
  

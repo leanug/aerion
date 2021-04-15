@@ -2,7 +2,6 @@ import React from "react"
 import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
-import { setColor } from '../constants/styles'
 
 const query = graphql`
   {

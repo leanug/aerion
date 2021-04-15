@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components'
 import { 
     setColor, 
     setFont, 
-    setBreakpoint, 
     setTransition } from '../constants/styles'
 
 const Globals = createGlobalStyle`
@@ -81,6 +80,10 @@ const Globals = createGlobalStyle`
         margin: 0 0 1.25rem 0;
     }
 
+    .center {
+        text-align: center;
+    }
+
     button {
         border: none;
     }
@@ -102,6 +105,11 @@ const Globals = createGlobalStyle`
         color: ${setColor.sigma};
     }
 
+    .light {
+        border-color: ${setColor.sigma};
+        color: ${setColor.sigma};
+    }
+
     .btn:hover {
         background-color: ${setColor.delta_1};
         color: ${setColor.sigma};
@@ -110,18 +118,6 @@ const Globals = createGlobalStyle`
     .btn.dark:hover {
         background-color: transparent;
         color: ${setColor.delta_1};
-    }
-
-    .p-y {
-      padding: 10rem 0;
-    }
-
-    .mb-5 {
-        margin-bottom: 5rem;
-    }
-
-    .mb-10 {
-        margin-bottom: 10rem;
     }
 `
 

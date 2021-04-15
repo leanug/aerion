@@ -6,7 +6,7 @@ import { setBreakpoint, setColor, setTransition } from '../constants/styles'
 
 const query = graphql`
   {
-    file(relativePath: { eq: "dwhite.jpg" }) {
+    file(relativePath: { eq: "hero.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

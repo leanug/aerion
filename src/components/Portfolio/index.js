@@ -15,7 +15,8 @@ const index = ({portfolio}) => {
 
 const Wrapper = styled.div`
   @media screen and (min-width: ${setBreakpoint.small} ) {
-    ${setGrid({gap: 0, min: '60rem'})}
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 `
 
