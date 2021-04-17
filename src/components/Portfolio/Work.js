@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import {setColor, setBreakpoint} from '../../constants/styles'
+import { setColor, setBreakpoint } from '../../constants/styles'
 
-const Work = ({img, url, title}) => {
+const Work = ({ img, url, title }) => {
   return (
     <Wrapper>
-      <a href={url} className="link">
-        <img src={img} className="img" />
+      <a href={ url } className="link">
+        <img alt={ `Project ${title}` } src={ img } className="img" />
         <div className="overlay">
-          <div className="h3">{title}</div>
+          <div className="h3">{ title }</div>
         </div>
       </a>
     </Wrapper>

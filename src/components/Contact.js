@@ -34,7 +34,7 @@ const Contact = () => (
                     className="form-control"
                 ></textarea>
             </label>
-            <button className="btn dark" type="submit" value="Send">Send Message</button>
+            <button aria-label="Send message" className="btn dark" type="submit" value="Send">Send Message</button>
         </form>
     </Wrapper>
 )
