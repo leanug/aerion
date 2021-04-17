@@ -6,9 +6,9 @@ import { setBreakpoint, setColor, setTransition } from '../constants/styles'
 
 const query = graphql`
   {
-    file(relativePath: { eq: "hero.jpg" }) {
+    file(relativePath: { eq: "iStock-1249674769.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100, maxWidth: 1600) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -32,9 +32,9 @@ const Hero = () => {
               Aerion is a web development studio based in Uruguay.
             </h1>
             <p>
-              We specialize in Fast landing pages, multi-page and E-commerce websites and work in small and medium size projects.
+              Fast landing pages, multi-page websites and E-commerce. Small and medium size projects.
             </p>
-            <a href="#" className="btn">Portfolio</a>
+            <a href="#portfolio" className="btn">Portfolio</a>
           </div>
         </div>
       </Background>

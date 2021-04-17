@@ -42,25 +42,12 @@ const Globals = createGlobalStyle`
         text-decoration: none;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: ${ setColor.delta_1 };
-        font-family: ${ setFont.primaryFont };
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 0.5rem;
-    }
-
-    .h1,
-    .h2,
-    .h3,
-    .h4,
-    .h5,
-    .h6 {
+    .h1, h1,
+    .h2, h2,
+    .h3, h3,
+    .h4, h4,
+    .h5, h5,
+    .h6, h6  {
         color: ${ setColor.delta_1 };
         font-family: ${ setFont.primaryFont };
         font-weight: 700;

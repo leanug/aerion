@@ -14,16 +14,9 @@ import Services from '../components/Services'
 
 export const query = graphql`
   {
-    lake: file(relativePath: {eq: "lake.jpg"}) {
+    house: file(relativePath: {eq: "iStock-1187621939.jpg"}) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 1200) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    house: file(relativePath: {eq: "bgsection.jpg"}) {
-      childImageSharp {
-        fluid(quality: 80, maxWidth: 800) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -52,7 +45,7 @@ const IndexPage = ({data}) => {
                 Build a Strong Online Presence with a professional and captivating Website 
                 that represents your Brand.
               </h2>
-              <a href="#" className="btn light-btn">Get a quote</a>
+              <a href="#contact" className="btn light-btn">Get a quote</a>
               </div>
             </div>
           </Background>
@@ -161,7 +154,8 @@ const Wrapper = styled.article`
   }
 
   .light-btn {
-    background-color: ${setColor.sigma};  
+    background-color: ${setColor.sigma};
+    border: none;
     color: ${setColor.delta_1}; 
   }
 
