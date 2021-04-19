@@ -39,6 +39,7 @@ module.exports = {
           ],
         },
         useMinify: true,
+        usePreload: false,
       },
     },
   ],

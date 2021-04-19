@@ -4,17 +4,17 @@ import {IoMdClose} from 'react-icons/io'
 import styled from 'styled-components'
 import {setColor, setBreakpoint} from '../constants/styles'
 
-const Sidebar = ({ isOpen, toggleSidebar }) => (
+const Sidebar = ({isOpen, toggleSidebar}) => (
     <Wrapper 
-      className={ `${ isOpen ? 'sidebar showSidebar' : 'sidebar' }` }
+      className={`${ isOpen ? 'sidebar showSidebar' : 'sidebar' }`}
       aria-label="Main sidebar containing navigation links"
-      aria-hidden={`${ ! isOpen }`}
+      aria={`-hidden="${ ! isOpen }"`}
     >
       <div className="sidebar-content">
         <Links styleClass={`${isOpen ? 'sidebar-links' : ''}`} />
       </div>
       <div className="btn-container">
-        <button onClick={ toggleSidebar } className="close-btn">
+        <button onClick={toggleSidebar} className="close-btn">
           <IoMdClose />
         </button>
       </div>
