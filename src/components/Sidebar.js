@@ -8,7 +8,6 @@ const Sidebar = ({isOpen, toggleSidebar}) => (
     <Wrapper 
       className={`${ isOpen ? 'sidebar showSidebar' : 'sidebar' }`}
       aria-label="Main sidebar containing navigation links"
-      aria={`-hidden="${ ! isOpen }"`}
     >
       <div className="sidebar-content">
         <Links styleClass={`${isOpen ? 'sidebar-links' : ''}`} />
