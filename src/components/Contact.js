@@ -6,7 +6,7 @@ import {
 
 const Contact = () => (
     <Wrapper>
-        <form>
+        <form name="contact" method="POST" data-netlify="true">
             <label>
                 Name
                 <input 
@@ -20,7 +20,7 @@ const Contact = () => (
                 Email
                 <input 
                     type="email" 
-                    name="name"
+                    name="email"
                     className="form-control"
                     placeholder="Email"
                 />
