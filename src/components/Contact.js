@@ -13,24 +13,27 @@ const Contact = () => (
             action="/thank-you"
         >
             <input type="hidden" name="form-name" value="Contact Form" />
-            <label>Name</label>
+            <label>Name
             <input 
                 type="text" 
                 name="name"
                 placeholder="Name"
             />
-            <label>Email</label>
+            </label>
+            <label>Email
             <input 
                 type="email" 
                 name="email"
                 placeholder="Email"
             />
-            <label>Message</label>
+            </label>
+            <label>Message
             <textarea 
                 placeholder="Message" 
                 name="message" 
                 rows="5" 
             ></textarea>
+            </label>
             <button aria-label="Send message" className="btn dark" type="submit">Send Message</button>
         </form>
     </Wrapper>

@@ -70,7 +70,7 @@ const IndexPage = ({data}) => {
             <a className="h5" href="instagram.com/aerion.studio">Instagram</a>
             <div className="mail-container">
               <p>Drop us a line with your ideas</p>
-              <div class="fromLeft h1">
+              <div class="fromLeft h1 underline">
                   <a href="mailto:hello@aerion.studio">hi@aerion.studio</a>
               </div>
             </div>
@@ -120,7 +120,7 @@ const Wrapper = styled.article`
     margin-top: 5rem;
   }
 
-  .h1 { 
+  .underline { 
       display:inline-block; 
       margin:0;
 
@@ -130,7 +130,7 @@ const Wrapper = styled.article`
       }
   }
 
-  .h1:after {
+  .underline:after {
       display:block;
       content: '';
       border-bottom: solid 2px ${setColor.alpha};  
@@ -138,8 +138,8 @@ const Wrapper = styled.article`
       transition: transform 250ms ease-in-out;
   }
 
-  .h1:hover:after {transform: scaleX(1);}
-  .h1.fromLeft:after{transform-origin:  0% 50%;}
+  .underline:hover:after {transform: scaleX(1);}
+  .underline.fromLeft:after{transform-origin:  0% 50%;}
 
   .p-y {
       padding: 10rem 0;
