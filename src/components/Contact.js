@@ -6,7 +6,12 @@ import {
 
 const Contact = () => (
     <Wrapper>
-        <form name="contact" method="POST" data-netlify="true">
+        <form 
+            name="contact" 
+            method="POST" 
+            data-netlify="true"
+            action="/thank-you"
+        >
             <label>
                 Name
                 <input 
