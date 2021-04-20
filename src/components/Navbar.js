@@ -15,7 +15,7 @@ const Navbar = ({ toggleSidebar }) => {
       <div className="logo-wrap">
         <Link to="/" className="h3">Aerion.</Link>
       </div>
-      <button onClick={toggleSidebar}>
+      <button aria-label="menu toggle" onClick={toggleSidebar}>
         <AiOutlineMenu />
       </button>
     </Nav>

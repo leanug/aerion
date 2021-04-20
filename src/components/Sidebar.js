@@ -13,7 +13,7 @@ const Sidebar = ({isOpen, toggleSidebar}) => (
         <Links styleClass={`${isOpen ? 'sidebar-links' : ''}`} />
       </div>
       <div className="btn-container">
-        <button onClick={toggleSidebar} className="close-btn">
+        <button aria-label="menu toggle" onClick={toggleSidebar} className="close-btn">
           <IoMdClose />
         </button>
       </div>
