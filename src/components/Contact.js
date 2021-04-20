@@ -7,39 +7,31 @@ import {
 const Contact = () => (
     <Wrapper>
         <form 
-            name="contact" 
+            name="Contact Form" 
             method="POST" 
             data-netlify="true"
             action="/thank-you"
         >
-            <label>
-                Name
-                <input 
-                    type="text" 
-                    name="name"
-                    className="form-control"
-                    placeholder="Name"
-                />
-            </label>
-            <label>
-                Email
-                <input 
-                    type="email" 
-                    name="email"
-                    className="form-control"
-                    placeholder="Email"
-                />
-            </label>
-            <label>
-                Message
-                <textarea 
-                    placeholder="Message" 
-                    name="message" 
-                    rows="5" 
-                    className="form-control"
-                ></textarea>
-            </label>
-            <button aria-label="Send message" className="btn dark" type="submit" value="Send">Send Message</button>
+            <input type="hidden" name="form-name" value="Contact Form" />
+            <label>Name</label>
+            <input 
+                type="text" 
+                name="name"
+                placeholder="Name"
+            />
+            <label>Email</label>
+            <input 
+                type="email" 
+                name="email"
+                placeholder="Email"
+            />
+            <label>Message</label>
+            <textarea 
+                placeholder="Message" 
+                name="message" 
+                rows="5" 
+            ></textarea>
+            <button aria-label="Send message" className="btn dark" type="submit">Send Message</button>
         </form>
     </Wrapper>
 )
