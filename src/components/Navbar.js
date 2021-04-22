@@ -6,8 +6,7 @@ import {
   setColor,
   setFont,
   setBreakpoint,
-  setTransition,
-  setContainer} from '../constants/styles'
+  setTransition} from '../constants/styles'
 
 const Navbar = ({ toggleSidebar }) => {
   return (

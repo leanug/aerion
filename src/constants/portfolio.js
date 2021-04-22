@@ -1,17 +1,17 @@
-import derossiImg from '../assets/home.jpg'
-import coloniaImg from '../assets/house.jpg'
+import distrialImg from '../assets/distrial.jpg'
+import coloniaImg from '../assets/colonia.jpg'
 
 const portfolio = [
     {
-        img:      derossiImg,
-        title:    'EXTRATERRESTRE',
-        url:      'https://www.extraterrestre.website',
+        img:      distrialImg,
+        title:    'Distrial',
+        url:      'https://www.distrial.website',
         category: 'gatsby'
     },
     {
         img:      coloniaImg,
-        title:    'Colonia',
-        url:      'https://www.coloniadevelopment.website',
+        title:    'Colonia Development',
+        url:      'https://www.coloniadevelopment.site',
         category: 'gatsby'
     },
 ]

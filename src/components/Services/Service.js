@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CgWebsite } from 'react-icons/cg'
 import { setColor, setRadius } from '../../constants/styles'
 
 const Service = ({service}) => (

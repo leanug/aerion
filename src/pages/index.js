@@ -70,7 +70,7 @@ const IndexPage = ({data}) => {
             <a className="h5" href="instagram.com/aerion.studio">Instagram</a>
             <div className="mail-container">
               <p>Drop us a line with your ideas</p>
-              <div class="fromLeft h1 underline">
+              <div className="fromLeft h1 underline">
                   <a href="mailto:hello@aerion.studio">hi@aerion.studio</a>
               </div>
             </div>

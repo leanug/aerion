@@ -1,7 +1,7 @@
 import React from 'react'
 import Work from './Work'
 import styled from 'styled-components'
-import { setBreakpoint, setGrid } from '../../constants/styles'
+import {setBreakpoint} from '../../constants/styles'
 
 const index = ({portfolio}) => {
   return (

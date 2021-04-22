@@ -4,7 +4,8 @@ module.exports = {
     titleTemplate: "%s · Aerion",
     description: "Aerion es un estudio de diseño web con sede en Uruguay. Landing pages, Static websites, WordPress and eCommerce.",
     siteUrl: "https://www.aerion.studio", // No trailing slash allowed!
-    image: "/screenshot.jpg", // Path to your image you placed in the 'static' folder
+    image: "/screenshot.jpg", // 'static' folder
+    twitterUsername: "",
   },
   plugins: [
     `gatsby-plugin-sitemap`,
@@ -39,7 +40,7 @@ module.exports = {
           ],
         },
         useMinify: true,
-        usePreload: true,
+        usePreload: false,
         usePreconnect: false,
       },
     },
