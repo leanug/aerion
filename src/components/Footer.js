@@ -1,49 +1,37 @@
 import React from 'react'
 import styled from 'styled-components'
-import { 
-    setContainer, 
-    setGridGap } from '../constants/styles'
 
 const Footer = () => {
     return (
-        <Wrapper>
-          <div className="container">
-              <div className="cols">
-                    <div className="h4">
-                        Aerion.
-                    </div>
-                    <div className="right">
-                        <span>
-                            &copy; { new Date().getFullYear() } All rights reserved.
-                        </span>
-                    </div>
-                </div>
-          </div>
+        <Wrapper className="wrapper-fluid">
+            <div>
+                <span style={{ fontWeight: '700' }}>Aerion.Studio</span>
+            </div>
+            <div>
+                <span style={{ marginRight: '2rem' }}> <a href="https://www.instagram.com/aerion.studio/">Instagram</a></span>
+                <span><a href="https://www.fiverr.com/leanug/create-a-responsive-and-fast-website">Fiverr Gig</a></span>
+            </div>
         </Wrapper>
     )
 }
 
 const Wrapper = styled.footer`
-    align-items: center;
+    background-color: var(--clr-psi);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
-    .container {
-      ${setContainer()}
+    @media screen and ( min-width: 576px ) {
+        display: flex;
+        justify-content: space-between;
     }
 
-    .cols {
-        display: grid;
-        grid-template-columns: repeat( auto-fit, minmax( 20rem, 1fr ));
-        grid-gap: ${ setGridGap.gridGapGamma };
-        margin: 1rem 0;
+    span {
+        color: var(--clr-omega);
+    }
 
-        div {
-            display: flex;
-            align-items: center;
-
-            &.right {
-                justify-self: flex-end;
-            }
-        }
+    a {
+        color: var(--clr-omega);
+        font-size: 1.4rem;    
     }
 `
 

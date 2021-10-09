@@ -1,13 +1,23 @@
 import { createGlobalStyle } from 'styled-components'
-import { 
-    setColor, 
-    setFont, 
-    setTransition } from '../constants/styles'
 
 const Globals = createGlobalStyle`
-    html {
-        box-sizing: border-box;
-        font-size: 62.5%;
+    :root {
+        --primary-font: "Roboto", Helvetica, Arial, sans-serif;
+        --secondary-font: "Poppins", Helvetica, Arial, sans-serif;
+        --radius-alpha: 0.5rem;
+        --radius-beta: 1rem;
+        --radius-gamma: 2rem;
+        --line-height-alpha: 1.5;
+        --line-height-beta: 2;
+        --max-width: 132rem;
+        --clr-alpha: #0075E9;
+        --clr-alpha-light: #278BEF;
+        --clr-beta: #F2F9FF;
+        --clr-gamma: rgb(229, 229, 229);
+        --clr-delta: #595959;
+        --clr-omega: #F6F6F6;
+        --clr-psi: rgb(31, 31, 31);
+        --shadow: drop-shadow(0px 0px 10px rgba(0,0,0,.1));
     }
 
     *,
@@ -18,93 +28,173 @@ const Globals = createGlobalStyle`
         box-sizing: inherit;
     }
 
-    body {
-        background:  ${ setColor.sigma };
-        color:       ${ setColor.delta_2 };
-        font-family: ${ setFont.secondaryFont };
-        font-size: 1.6rem;
-        font-weight: 400;
-        line-height: 2;
+    html {
+        box-sizing: border-box;
+        font-size: 62.5% !important;
     }
 
-    ul {
-        list-style-type: none;
+    body {
+        color: var(--clr-psi);
+        font-family: var(--primary-font);
+        font-size: 1.8rem;
+        line-height: var(--line-height-alpha);
+        transition: color 0.25s linear;
     }
-    
+
+    .wrapper {
+        max-width: var(--max-width);
+        margin: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 100%;
+    }
+
+    .wrapper-fluid {
+        padding-left: calc(2rem + 4vw);
+        padding-right: calc(2rem + 4vw);
+
+        @media screen and ( max-width: 576px ) {
+            padding: 0 2rem;
+        }
+    }
+
+    .header-1, h1,
+    .header-2, h2,
+    .header-3, h3,
+    .header-4, h4,
+    .header-5, h5,
+    .header-6, h6,
+    .display-one,
+    .display-two,
+    .display-three,
+    .display-four  {
+        font-family: var(--secondary-font);
+        line-height: var(--line-height-alpha);
+        margin: 0;
+        font-weight: 700;
+    }
+
+    h1, .header-1 {
+        font-size: 4rem;
+    }
+
+    h2, .header-2 {
+        font-size: 3.2rem;
+    }
+
+    h3, .header-3 {
+        font-size: 2.5rem;
+    }
+
+    h4, .header-4 {
+        font-size: 1.75rem;
+    }
+
+    h5, .header-5 {
+        font-size: 1.55rem;
+    }
+
+    h6, .header-6 {
+        font-size: 1rem;
+    }
+
+    @media screen and ( min-width: 768px ) {
+        h1, .header-1 {
+            font-size: 5rem;
+        }
+
+        h2, .header-2 {
+            font-size: 3.8rem;
+        }
+
+        h3, .header-3 {
+            font-size: 3rem;
+        }
+
+        h4, .header-4 {
+            font-size: 2.25rem;
+        }
+
+        h5, .header-5 {
+            font-size: 1.75rem;
+        }
+
+        h6, .header-6 {
+            font-size: 1.25rem;
+        }
+    }
+
     a {
-        color: ${ setColor.delta_1 };
+        color: var(--clr-psi);
+        cursor: pointer;
         text-decoration: none;
-        ${ setTransition() };
+        transition: all 0.2s linear;
     }
 
     a:hover {
-        color: ${ setColor.alpha };
+        text-decoration: underline;
+    }
+
+    a.button:hover {
         text-decoration: none;
     }
-
-    .h1, h1,
-    .h2, h2,
-    .h3, h3,
-    .h4, h4,
-    .h5, h5,
-    .h6, h6  {
-        color: ${ setColor.delta_1 };
-        font-family: ${ setFont.primaryFont };
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 0.5rem;
-    }
-
-    h1, .h1 { font-size: 2.5em; }
-    h2, .h2 { font-size: 2em; }
-    h3, .h3 { font-size: 1.75em; }
-    h4, .h4 { font-size: 1.5em; }
-    h5, .h5 { font-size: 1.25em; }
-    h6, .h6 { font-size: 1em; }
-
-    p {
-        line-height: 1.8;
-        margin: 0 0 1.25rem 0;
-    }
-
-    .center {
-        text-align: center;
-    }
-
-    button {
+ 
+    .button {
         border: none;
+        border-radius: 3rem;
+        color: var(--clr-omega);
+        cursor: pointer;
+        padding: 1.4rem 2.2rem;
     }
 
-    .btn {
-        background-color: transparent;
-        border: 0.0625rem solid ${setColor.delta_1};
-        border-radius: 3.75rem;
-        display: inline-block;
-        font-weight: 700;
-        letter-spacing: 1px;
-        margin-top: 2rem;
-        padding: 1rem 3rem;
-        ${setTransition()}
+    .bg-light {
+        background-color: var(--clr-gamma);
+        color: var(--clr-psi);
     }
 
-    .dark {
-        background-color: ${setColor.delta_1};
-        color: ${setColor.sigma};
+    .bg-dark {
+        background-color: var(--clr-psi);
     }
 
-    .light {
-        border-color: ${setColor.sigma};
-        color: ${setColor.sigma};
+    .bg-alpha {
+        background-color: var(--clr-alpha);
+        transition: all 0.2s linear;
+
+        &:hover {
+            background-color: var(--clr-alpha-light);
+        }
     }
 
-    .btn:hover {
-        background-color: ${setColor.delta_1};
-        color: ${setColor.sigma};
+    .text-alpha {
+        color: var(--clr-alpha);
     }
 
-    .btn.dark:hover {
-        background-color: transparent;
-        color: ${setColor.delta_1};
+    .section-my {
+        margin-bottom: calc( 6rem + 10vw );
+        margin-top: calc( 6rem + 10vw );
+
+        @media screen and ( min-width: 1200px ) {
+            margin-bottom: 16rem;
+            margin-top: 16rem;
+        }
+    }
+
+    .section-mb {
+        margin-bottom: calc( 6rem + 10vw );
+    }
+
+    .section-mt {
+        margin-top: calc( 6rem + 10vw );
+    }
+
+    @media screen and ( min-width: 1200px ) {
+        .section-mb {
+            margin-bottom: 16rem;
+        }
+
+        .section-mt {
+            margin-top: 16rem;
+        }
     }
 `
 

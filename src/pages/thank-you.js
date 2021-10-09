@@ -1,16 +1,15 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 import styled from 'styled-components'
-import SEO from "../components/SEO"
-import {setContainer} from '../constants/styles'
+import Seo from "../components/SEO"
 
 const ThankYouPage = () => {
     return (
         <Layout>
-            <SEO 
-            description="Success! Thank you for your submission!"
-            title="Success! Thank you"
+            <Seo 
+                description="Success! Thank you for your submission!"
+                title="Success! Thank you"
             />
             <Wrapper>
                 <h1>Contact</h1>
@@ -26,11 +25,6 @@ const ThankYouPage = () => {
 const Wrapper = styled.section`
     margin: 14rem 0;  
     text-align: center;
-    ${setContainer.container};
-
-    div {
-        margin-top:3rem;
-    }
 `
 
 export default ThankYouPage

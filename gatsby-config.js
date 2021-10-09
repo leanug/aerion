@@ -1,48 +1,34 @@
 module.exports = {
   siteMetadata: {
-    title: "Aerion",
-    titleTemplate: "%s · Aerion",
-    description: "Aerion es un estudio de diseño web con sede en Uruguay. Landing pages, Static websites, WordPress and eCommerce.",
-    siteUrl: "https://www.aerion.studio", // No trailing slash allowed!
-    image: "/screenshot.jpg", // 'static' folder
-    twitterUsername: "",
+    author: "Leandro Ubilla Gonzalez",
+    description: `Increase the conversion rates of your marketing campaings with a professional 
+    and fast loading landing page.`,
+    siteUrl: "https://www.aerion.studio",
+    title: "Aerion Studio",
   },
   plugins: [
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
+    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-styled-components",
+    "gatsby-transformer-sharp",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `assets`,
-        path: `${__dirname}/src/assets`,
+        name: "images",
+        path: "./src/images/",
       },
+      __key: "images",
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-webfonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: {
-          google: [
-            {
-              family: "Inter",
-              variants: ["400", "500", "700"],
-              fontDisplay: 'swap',
-              strategy: 'selfHosted',
-            },
-            {
-              family: "Manrope",
-              variants: ["400", "500", "700"],
-              fontDisplay: 'swap',
-              strategy: 'selfHosted',
-            },
-          ],
-        },
-        useMinify: true,
-        usePreload: false,
-        usePreconnect: false,
-      },
-    },
+        fonts: [
+          `roboto\:400,700`,
+          `poppins\:600,700`,
+        ],
+        display: 'swap'
+      }
+    }
   ],
-}
+};

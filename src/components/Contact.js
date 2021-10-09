@@ -1,8 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { 
-    setColor, 
-    setRadius } from '../constants/styles'
 
 const Contact = () => (
     <Wrapper>
@@ -34,12 +31,17 @@ const Contact = () => (
                 rows="5" 
             ></textarea>
             </label>
-            <button aria-label="Send message" className="btn dark" type="submit">Send Message</button>
+            <button aria-label="Send message" className="button bg-dark" type="submit">Send Message</button>
         </form>
     </Wrapper>
 )
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
+    background-color: white;
+    border-radius: 1rem;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,.1));
+    padding: 3rem;
+
     label {
         display: block;
         font-weight: 600;
@@ -56,19 +58,16 @@ const Wrapper = styled.section`
 
     input[type=text],
     input[type=email],
-    textarea
-    {
-        background-color: ${ setColor.sigma };
-        border: 1px solid ${ setColor.tau };
-        ${setRadius.beta}
-        color: ${ setColor.delta_2 };
+    textarea {
+        border: 1px solid var(--clr-gamma);
+        border-radius: 0.5rem;
         font-size: 1.6rem;
         margin-top: .5rem;
         padding: 1.5rem;
         width: 100%;
     }
 
-    .btn {
+    .button {
         cursor: pointer;
         padding: 1.7rem 3rem;
         margin-top: 0.5rem;

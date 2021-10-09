@@ -1,35 +1,36 @@
 import React from 'react'
-import {Link} from 'gatsby'
-import Layout from '../components/Layout'
+import { Link } from 'gatsby'
+import Layout from "../components/Layout"
+import Seo from '../components/SEO'
 import styled from 'styled-components'
-import SEO from "../components/SEO"
-import {setContainer} from '../constants/styles'
 
 const NotFoundPage = () => {
     return (
         <Layout>
-            <SEO 
-            description="404 - age not found"
-            title="age not found"
+            <Seo 
+                title="404 - Page not found"
             />
             <Wrapper>
-                <h1>404</h1>
-                <h3>Page not found</h3>
-                <div>
-                    <Link to="/" className="btn">Home</Link>
+                <div className="text-center">
+                    <h1 className="display-one">404</h1>
+                    <h2 className="display-four mb-30">Page not found</h2>
+                    <Link className="button" to="/">Home</Link>
                 </div>
             </Wrapper>
         </Layout>
     )
 }
 
-const Wrapper = styled.section`
-    margin: 14rem 0;  
-    text-align: center;
-    ${setContainer.container};
+const Wrapper = styled.div`
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
 
-    div {
-        margin-top:3rem;
+    .button {
+        border: 1px solid ${({ theme }) => theme.gamma };
+        border-radius: var(--radius-alpha);
+        padding: 1rem 2rem;
     }
 `
 
