@@ -13,14 +13,14 @@ export const query = graphql`
             childImageSharp {
                 gatsbyImageData(
                     placeholder: BLURRED
+                    width: 817
+                    height: 902
                 )
             }
         }
         placeholderImage2: file(relativePath: { eq: "img2.jpg" }) {
             childImageSharp {
                 gatsbyImageData(
-                    height: 651
-                    
                     placeholder: BLURRED
                 )
             }
@@ -39,7 +39,7 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <Seo />
-            <article className="wrapper mt-100 section-mb">
+            <article style={{ marginTop: '3rem' }} className="wrapper">
                 <SectionColumns className="section-mb">
                     <div>
                         <h1>
@@ -50,12 +50,11 @@ const IndexPage = ({ data }) => {
                             and fast loading landing page.
                         </p>
                         <a href="#contact" style={{ marginRight: '2rem' }} className="button bg-alpha">Contact</a>
-                        <a href="https://www.fiverr.com/leanug/create-a-responsive-and-fast-website">
+                        <a style={{ fontWeight: '600' }} href="https://www.fiverr.com/leanug/create-a-responsive-and-fast-website">
                             Hire us on Fiverr
                         </a>
                     </div>
-                    <GatsbyImage 
-                        className="border-radius-alpha" 
+                    <GatsbyImage
                         image={ image1 } 
                         alt="Landing page mockup"
                     />
@@ -103,7 +102,7 @@ const IndexPage = ({ data }) => {
                             <a style={{ fontWeight: '700', fontSize: '2rem' }} href="https://www.instagram.com/aerion.studio">Instagram</a>
                             <div style={{ marginTop: '3rem' }}>
                                 <p style={{ marginTop: '3rem' }}>Drop us a line</p>
-                                <Mail href="mailto:hello@aerion.studio">
+                                <Mail href="mailto:hi@aerion.studio">
                                     hi@aerion.studio
                                 </Mail>
                             </div>
@@ -145,14 +144,12 @@ const Mail = styled.a`
 
 const SectionColumns = styled.section`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
     grid-gap: 3rem 8rem;
     align-items: center;
     
     @media screen and ( max-width: 768px ) {
-        div {
-            margin-top: 3rem;
-        }
+        grid-gap: 6rem 8rem;
     }
 `
 

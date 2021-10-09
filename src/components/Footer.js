@@ -3,13 +3,15 @@ import styled from 'styled-components'
 
 const Footer = () => {
     return (
-        <Wrapper className="wrapper-fluid">
-            <div>
-                <span style={{ fontWeight: '700' }}>Aerion.Studio</span>
-            </div>
-            <div>
-                <span style={{ marginRight: '2rem' }}> <a href="https://www.instagram.com/aerion.studio/">Instagram</a></span>
-                <span><a href="https://www.fiverr.com/leanug/create-a-responsive-and-fast-website">Fiverr Gig</a></span>
+        <Wrapper className="section-mt">
+            <div className="wrapper">
+                <div>
+                    <span style={{ fontWeight: '700' }}>Aerion.Studio</span>
+                </div>
+                <div>
+                    <span style={{ marginRight: '2rem' }}> <a href="https://www.instagram.com/aerion.studio/">Instagram</a></span>
+                    <span><a href="https://www.fiverr.com/leanug/create-a-responsive-and-fast-website">Fiverr Gig</a></span>
+                </div>
             </div>
         </Wrapper>
     )
@@ -21,8 +23,10 @@ const Wrapper = styled.footer`
     padding-bottom: 2rem;
 
     @media screen and ( min-width: 576px ) {
-        display: flex;
-        justify-content: space-between;
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     span {

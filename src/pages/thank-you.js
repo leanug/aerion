@@ -12,10 +12,10 @@ const ThankYouPage = () => {
                 title="Success! Thank you"
             />
             <Wrapper>
-                <h1>Contact</h1>
+                <h1>Success</h1>
                 <h3>Thank you for your submission!</h3>
-                <div>
-                    <Link to="/" className="btn">Home</Link>
+                <div style={{ marginTop: '3rem' }}>
+                    <Link to="/" className="button bg-dark">Home</Link>
                 </div>
             </Wrapper>
         </Layout>

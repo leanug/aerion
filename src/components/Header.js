@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Navbar = () => {
     return (
-        <Header className="wrapper-fluid">
+        <Header className="wrapper">
             <div>
                 <span className="logo">Aerion.Studio</span>
             </div>

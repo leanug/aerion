@@ -44,8 +44,8 @@ const Globals = createGlobalStyle`
     .wrapper {
         max-width: var(--max-width);
         margin: auto;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         width: 100%;
     }
 
@@ -98,7 +98,7 @@ const Globals = createGlobalStyle`
         font-size: 1rem;
     }
 
-    @media screen and ( min-width: 768px ) {
+    @media screen and ( min-width: 992px ) {
         h1, .header-1 {
             font-size: 5rem;
         }
@@ -144,6 +144,7 @@ const Globals = createGlobalStyle`
         border-radius: 3rem;
         color: var(--clr-omega);
         cursor: pointer;
+        font-weight: 600;
         padding: 1.4rem 2.2rem;
     }
 
